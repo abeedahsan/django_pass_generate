@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Homepage</h1>
+
+		{{ password }}
+		<center>
+			<h2>
+				Password Generator
+
+			</h2>
+		</center>
+
+		<form action="{% url 'password' %}">
+			<select name="length"> 
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12" selected="selected">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+			</select> Length
+			<br>
+
+			<br>
+
+			<input type="Checkbox" name="uppercase">Uppercase
+
+			<br>
+
+			<br>
+
+			<input type="Checkbox" name="Number">Number
+
+			<br>
+
+			<br>
+
+			<input type="Checkbox" name="special">Special
+
+			<br>
+
+			<br>
+
+			<input type="submit" value="Generate Password" class="btn btn-primary">
+
+			<br>
+
+
+		</form> <br>
+
+		<a href="{% url 'about1' %}"> About </a>
+	</div>
+
+</body>
+</html>
